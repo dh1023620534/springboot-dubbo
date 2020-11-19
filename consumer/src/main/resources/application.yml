@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: consumer
+server:
+  port: 10088
+
+#Dubbo provider2 configuration
+dubbo:
+  application:
+    name: dubbo_consumer
+  registry:
+    protocol: zookeeper
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+      name: dubbo
+      port: 20881
+
+#扫描注解包通过该设置将服务注册到zookeeper
+ # scan:
+   # base-packages: com.demo.service
